@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteúdo no javascript</title>
+
+    <style>
+        body{
+            background-color: bisque;
+            color: rgb(69, 4, 4);
+            text-align: center;
+
+        }
+
+        .myImage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="fundo">
+    <h1 id="titulo">Testando mudança de cor de fundo Body, a cor da fonte e a imagem na página</h1>
+
+    <input type="button" id="verde" value="cor verde" onclick="verde()" />
+    <input type="button" id="azul" value="cor azul"onclick="azul()" />
+    <input type="button" id="normal" value="normal"onclick="normal()" />
+
+    <hr />
+
+    <img src="../imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg" class="myImage" />
+    <script>
+
+        let header = document.getElementById("titulo");
+
+        function verde(){
+            document.querySelector(".fundo").style.backgroundColor="green";
+            document.querySelector(".fundo").style.color="white";
+            document.querySelector(".myImage").src="imagens/goosip girl.jpeg";
+            header.innerHTML="Testando o Modo verde";
+            document.querySelector("#titulo").style.color="lime";
+        }
+
+        function azul(){
+            document.querySelector(".fundo").style.backgroundColor="blue";
+            document.querySelector(".fundo").style.color="yellow";
+            document.querySelector(".myImage").src="imagens/the umbrela academy.jpeg";
+            header.innerHTML="Testando o Modo Azul";
+            document.querySelector("#titulo").style.color="pink";
+        }
+
+        function normal(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color="rgb(69, 4, 4)";
+            document.querySelector(".myImage").src="imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg";
+        }
+    </script>
+</body>
+</html>

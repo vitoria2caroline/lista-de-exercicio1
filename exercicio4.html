@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valores de forma descendente</title>
+</head>
+<body>
+    <h1>Exercicio4</h1>
+    <script>
+        /*Dados três valores A, B e C, construa um programa em Javascript, que mostre na tela os valores de forma descendente (do maior para o menor).*/
+        let A = parseInt(prompt("Digite um número: "));
+        let B = parseInt(prompt("Digite outro número: "));
+        let C = parseInt(prompt("Digite mais um número: "));
+
+        if(A>B && C<B){
+        document.write("O número maior é"+A+ "e depois "+B+"e "+C)
+    }else if(B>C && A<C){
+        document.write("O número maior é"+B+ "e depois "+C+"e"+A)
+    }else if(C>A && A>B){
+        document.write("O número maior é"+C+ "e depois "+A+"e"+B)
+    }else if(A>C && C>B){
+        document.write("O número maior é"+A+ "e depois "+C+"e"+B)
+    }else if(A<B && A>C){
+        document.write("O número maior é"+B+ "e depois "+A+"e"+C)
+    }else if(C>A && B>A){
+        document.write("O número maior é "+C+ "e depois "+B+"e"+A)
+    }else{
+        document.write("valor inválido")
+    }
+    </script>
+</body>
+</html>

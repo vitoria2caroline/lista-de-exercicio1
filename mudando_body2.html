@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteúdo no javascript</title>
+
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            color: rgb(69, 4, 4);
+            text-align: center;
+
+        }
+
+        .myImage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="fundo">
+    <h1>Testando mudança de cor de fundo Body, a cor da fonte e a imagem na página</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio cum aspernatur suscipit beatae similique soluta iure, quas sequi rem hic eveniet quibusdam provident minima omnis. Et dolorem explicabo consequatur?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni iusto molestias doloremque quasi ducimus, necessitatibus sapiente error asperiores! Repudiandae perspiciatis delectus fugit quisquam numquam possimus doloribus exercitationem voluptates dolore.
+
+    <input type="button" id="modo escuro" value=" modo escuro" onclick="escuro()" />
+    <input type="button" id="modo daltonico" value="modo daltonico" onclick="daltonico()" />
+    <input type="button" id="normal" value="normal" onclick="normal()" />
+
+    <hr />
+
+    <img src="../imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg" class="myImage" />
+    <script>
+        function escuro(){
+            document.querySelector(".fundo").style.backgroudColor="black";
+            document.querySelector(".fundo").style.color="white";
+            document.querySelector(".myImage").src="imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg";
+        }
+
+        function daltonico(){
+            document.querySelector(".fundo").style.backgroudColor="pink";
+            document.querySelector(".fundo").style.color="green";
+            document.querySelector(".myImage").src="imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg";
+        }
+
+        function normal(){
+            document.querySelector(".fundo").style.backgroudColor="white";
+            document.querySelector(".fundo").style.color="rgb(69, 4, 4)";
+            document.querySelector(".myImage").src="imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg";
+        }
+
+</body>
+</html>

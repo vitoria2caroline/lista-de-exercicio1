@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteúdo no javascript</title>
+
+    <style>
+        body{
+            background-color: white;
+            color: rgb(69, 4, 4);
+            text-align: center;
+
+        }
+
+        .myImage{
+            width: 500px;
+            height: 340px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="fundo">
+    <h1 id="titulo"> Testando mudança de cor de fundo Body, a cor da fonte e a imagem na página</h1>
+    <p id="texto1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptas reprehenderit, eligendi placeat sunt totam consectetur dolorum possimus id incidunt eveniet delectus error nostrum corporis velit amet. Saepe, esse obcaecati.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deserunt. Voluptates quia voluptatum aliquam quos adipisci ratione aspernatur amet. Ea, maxime veniam? Nobis magnam inventore necessitatibus ipsum in sequi aliquid.</p>
+    <br/>
+    <input type="button" id="modo escuro" value="escuro" onclick="escuro()" />
+    <input type="button" id="modo daltonico" value="daltonico" onclick="daltonico()" />
+    <input type="button" id="modo normal" value="normal" onclick="normal()" />
+    <input type="button" id="almentar_texto" value="A+" onclick="almentar_texto()" />
+    <hr />
+
+    <img src="../imagens/WhatsApp Image 2024-09-09 at 09.46.46 (1).jpeg" class="myImage" />
+    <br/>
+    <p id="texto2"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam magni exercitationem distinctio minus. Dolorum, soluta tempore quae ratione corrupti, sit repudiandae nihil iure vel earum tempora fugit vero impedit blanditiis.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsa repellat molestias. Provident reiciendis, maiores voluptatibus iste incidunt dolor suscipit vitae, a, ullam mollitia rem amet sequi veritatis repellat quisquam!</p>
+    <script>
+        let header=document.getElementById("titulo")
+
+        function escuro(){
+            document.querySelector(".fundo").style.backgroundColor="black";
+            document.querySelector(".fundo").style.color="white";
+            header.innerHTML="Modo escuro";
+        }
+
+        function daltonico(){
+            document.querySelector(".fundo").style.backgroundColor="#e44b8d";
+            document.querySelector(".fundo").style.color="lime";
+            header.innerHTML="Modo daltonico";
+        }
+
+        function normal(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color="rgb(69, 4, 4)";
+            header.innerHTML="Modo normal";
+        }
+
+        function almentar_texto(){
+            document.querySelector("#texto1").style.fontSize="25px";
+            document.querySelector("#texto2").style.fontSize="25px";
+            header.innerHTML="Modo Alto";
+        }
+    </script>
+</body>
+</html>
